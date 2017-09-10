@@ -1,0 +1,29 @@
+{
+  "name": "readerApi",
+  "version": "1.0.0",
+  "description": "RESTful readerApi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linkhui/readerApi.git"
+  },
+  "keywords": [
+    "RESTful"
+  ],
+  "author": "linkhui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linkhui/readerApi/issues"
+  },
+  "homepage": "https://github.com/linkhui/readerApi#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
