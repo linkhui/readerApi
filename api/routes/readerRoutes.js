@@ -3,7 +3,7 @@ module.exports = function(app) {
     var todoList = require('../controllers/readerController');
 
     app.route('/reader')
-        .get(todoList.listall);
+        .get(reader.listall);
 
     // todoList Routes
     // app.route('/tasks')
