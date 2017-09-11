@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-    var todoList = require('../controllers/readerController');
+    var reader = require('../controllers/readerController');
 
     app.route('/reader')
         .get(reader.listall);
