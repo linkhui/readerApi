@@ -29,9 +29,14 @@ exports.write = function (req, res) {
     //
     // reader.insertDB(res, addSqlParams);
 
-    const body = req.body.Body
-    res.set('Content-Type', 'text/plain')
-    res.send(`You sent: ${body} to Express`)
+    console.log('POST /');
+    console.dir(req.body);
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('thanks');
+
+    // const body = req.body.Body
+    // res.set('Content-Type', 'text/plain')
+    // res.send(`You sent: ${body} to Express`)
 
 }
 

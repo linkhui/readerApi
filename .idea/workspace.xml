@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="028607c8-c50e-4489-a2f9-86ee37c60c37" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/routes/readerRoutes.js" afterPath="$PROJECT_DIR$/api/routes/readerRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/controllers/readerController.js" afterPath="$PROJECT_DIR$/api/controllers/readerController.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readerRoutes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readerRoutes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/routes/readerRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readerController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readerController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/controllers/readerController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="654">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,8 +99,8 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/api/models/readerModel.js" />
-        <option value="$PROJECT_DIR$/api/controllers/readerController.js" />
         <option value="$PROJECT_DIR$/api/routes/readerRoutes.js" />
+        <option value="$PROJECT_DIR$/api/controllers/readerController.js" />
       </list>
     </option>
   </component>
@@ -306,12 +306,12 @@
       <option name="presentableId" value="Default" />
       <updated>1505055614812</updated>
       <workItem from="1505055616238" duration="4322000" />
-      <workItem from="1505100227554" duration="2057000" />
+      <workItem from="1505100227554" duration="2212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6379000" />
+    <option name="totallyTimeSpent" value="6534000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,18 +428,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/controllers/readerController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/readerRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/controllers/readerController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
