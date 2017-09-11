@@ -5,6 +5,8 @@ module.exports = function(app) {
     app.route('/reader')
         .get(reader.listall);
 
+    app.route('/write')
+        .get(reader.listall);
     // todoList Routes
     // app.route('/tasks')
     //     .get(todoList.list_all_tasks)
