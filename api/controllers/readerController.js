@@ -27,7 +27,7 @@ exports.write = function (req, res) {
     const body = req.body
     console.log(body.title)
 
-    var addSqlParams = [body.title,'','','','',1];
+    var addSqlParams = [body.title,body.audio_url,body.filename,body.content,body.origin,body.segments];
     var reader = require('../models/readerModel');
 
 

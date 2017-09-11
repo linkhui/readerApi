@@ -42,7 +42,7 @@ exports.insertDB = function (res,addSqlParams) {
 
     connection.connect();
 
-    var  addSql = 'INSERT INTO audio(title,audio_url,path,content,origin,segments) VALUES(?,?,?,?,?,?)';
+    var  addSql = 'INSERT INTO audio(title,audio_url,filename,content,origin,segments) VALUES(?,?,?,?,?,?)';
     // var  addSqlParams = ['菜鸟工具', 'https://c.runoob.com','23453', 'CN'];
 //增
     connection.query(addSql,addSqlParams,function (err, result) {
