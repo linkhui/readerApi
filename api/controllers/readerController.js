@@ -6,8 +6,10 @@ exports.listall = function (req, res) {
     console.log('call test');
     // var pathname = url.parse(req.url).pathname;
     // var querys = url.parse(req.url).query;
-    var city = req.query['city'];
-    console.log("Request for "  + " " + city + " received.");
+    // var city = req.query['city'];
+    // console.log("Request for "  + " " + city + " received.");
+
+    readDB();
 
     res.json({
     "success": true,
@@ -21,6 +23,27 @@ exports.listall = function (req, res) {
     }
 });
     
+}
+
+function readDB() {
+    var mysql      = require('mysql');
+    var connection = mysql.createConnection({
+        host     : 'localhost',
+        user     : 'root',
+        password : 'Mysql_781101',
+        database : 'reader'
+    });
+
+    connection.connect();
+
+    connection.query('SELECT * from audio', function(err, rows, fields) {
+        if (!err)
+            console.log('The solution is: ', rows);
+        else
+            console.log('Error while performing Query.');
+    });
+
+    connection.end();
 }
 
 exports.list_all_tasks = function(req, res) {
