@@ -15,7 +15,7 @@ exports.listall = function (req, res) {
         "errorCode": "200",
         "fields": {
         "城市": city,
-            "最低温度": "36℃",
+            "最低温度": "30℃",
             "最高温度": "42℃",
             "天气": "多云"
     }
