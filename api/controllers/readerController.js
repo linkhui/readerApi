@@ -21,7 +21,7 @@ exports.listall = function (req, res) {
     //         "最高温度": "42℃",
     //         "天气": "多云"
     // }
-    };
+    }
 
 function readDB(res) {
     var mysql      = require('mysql');
@@ -48,9 +48,9 @@ function readDB(res) {
                 "fields": {}
             });
         }
+    });
 
     connection.end();
-    };
 }
 
 exports.list_all_tasks = function(req, res) {
