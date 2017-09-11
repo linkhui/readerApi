@@ -22,17 +22,20 @@ exports.write = function (req, res) {
     // var querys = url.parse(req.url).query;
     // var city = req.query['city'];
     // console.log("Request for "  + " " + city + " received.");
-
-    // var addSqlParams = [];
-    // var reader = require('../models/readerModel');
-    //
-    //
-    // reader.insertDB(res, addSqlParams);
-
     console.log('POST /');
     console.dir(req.body);
+    const body = req.body
+    console.log(body.title)
+
+    var addSqlParams = [body.title,'','','','',1];
+    var reader = require('../models/readerModel');
+
+
+    reader.insertDB(res, addSqlParams);
+
+
     res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end('thanks');
+    res.end('thanks,You sent: ${body} to Express');
 
     // const body = req.body.Body
     // res.set('Content-Type', 'text/plain')
