@@ -35,18 +35,19 @@ function readDB(res) {
     connection.connect();
 
     connection.query('SELECT * from audio', function(err, rows, fields) {
-        if (!err)
+        if (!err) {
             console.log('The solution is: ', rows);
             res.json(rows);
-        else
+        }
+        else {
             console.log('Error while performing Query.');
             res.json({
-            "success": false,
+                "success": false,
                 "errorMsg": "Error while performing Query.",
                 "errorCode": "400",
-                "fields": {
-            }
+                "fields": {}
             });
+        }
 
     connection.end();
     }
