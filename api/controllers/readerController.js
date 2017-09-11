@@ -9,23 +9,23 @@ exports.listall = function (req, res) {
     // var city = req.query['city'];
     // console.log("Request for "  + " " + city + " received.");
 
-    readDB();
+    readDB(res);
 
-    res.json({
-    "success": true,
-        "errorMsg": "成功",
-        "errorCode": "200",
-        "fields": {
-        "城市": city,
-            "最低温度": "30℃",
-            "最高温度": "42℃",
-            "天气": "多云"
-    }
+    // res.json({
+    // "success": true,
+    //     "errorMsg": "成功",
+    //     "errorCode": "200",
+    //     "fields": {
+    //     "城市": "Shanghai",
+    //         "最低温度": "30℃",
+    //         "最高温度": "42℃",
+    //         "天气": "多云"
+    // }
 });
     
 }
 
-function readDB() {
+function readDB(res) {
     var mysql      = require('mysql');
     var connection = mysql.createConnection({
         host     : 'localhost',
@@ -39,9 +39,16 @@ function readDB() {
     connection.query('SELECT * from audio', function(err, rows, fields) {
         if (!err)
             console.log('The solution is: ', rows);
+            res.json(rows);
         else
             console.log('Error while performing Query.');
-    });
+            res.json({
+            "success": false,
+                "errorMsg": "Error while performing Query.",
+                "errorCode": "400",
+                "fields": {
+            }
+            });
 
     connection.end();
 }
