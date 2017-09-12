@@ -11,7 +11,7 @@ exports.readDB = function (res) {
 
     connection.connect();
 
-    connection.query('SELECT * from audio LIMIT 1,20', function(err, rows, fields) {
+    connection.query('SELECT * from audio LIMIT 1,20 ORDER BY id DESC', function(err, rows, fields) {
         if (!err) {
             console.log('The solution is: ', rows);
             res.json(rows);
