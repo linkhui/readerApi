@@ -11,7 +11,7 @@ exports.listall = function (req, res) {
 
     var reader = require('../models/readerModel');
 
-    reader.readDB(res);
+    reader.readDB(req,res);
 
 }
 

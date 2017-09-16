@@ -1,6 +1,6 @@
 'use strict';
 
-exports.readDB = function (res) {
+exports.readDB = function (req,res) {
     var mysql      = require('mysql');
     var connection = mysql.createConnection({
         host     : 'localhost',
@@ -11,7 +11,13 @@ exports.readDB = function (res) {
 
     connection.connect();
 
-    connection.query('SELECT * from audio ORDER BY id DESC LIMIT 1,20 ', function(err, rows, fields) {
+    var pathname = url.parse(req.url).pathname;
+    var querys = url.parse(req.url).query;
+    var pagesize = req.query['pagesize'];
+    // console.log("Request for "  + " " + city + " received.");
+    var selectsql = 'SELECT id,title,audio_url,filename,segments from audio ORDER BY id DESC LIMIT 0,' + str(pagesize)
+
+    connection.query(selectsql, function(err, rows, fields) {
         if (!err) {
             console.log('The solution is: ', rows);
             res.json(rows);
