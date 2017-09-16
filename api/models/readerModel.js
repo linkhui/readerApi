@@ -1,5 +1,7 @@
 'use strict';
 
+var url = require("url");
+
 exports.readDB = function (req,res) {
     var mysql      = require('mysql');
     var connection = mysql.createConnection({
@@ -14,6 +16,9 @@ exports.readDB = function (req,res) {
     var pathname = url.parse(req.url).pathname;
     var querys = url.parse(req.url).query;
     var pagesize = req.query['pagesize'];
+    if (pagesize == 0) {
+        pagesize = 50;
+    }
     // console.log("Request for "  + " " + city + " received.");
     var selectsql = 'SELECT id,title,audio_url,filename,segments from audio ORDER BY id DESC LIMIT 0,' + str(pagesize)
 
