@@ -20,7 +20,7 @@ exports.readDB = function (req,res) {
         pagesize = 50;
     }
     // console.log("Request for "  + " " + city + " received.");
-    var selectsql = 'SELECT id,title,audio_url,filename,segments from audio ORDER BY id DESC LIMIT 0,' + pagesize.toSource()
+    var selectsql = 'SELECT id,title,audio_url,filename,segments from audio ORDER BY id DESC LIMIT 0,' + pagesize
 
     connection.query(selectsql, function(err, rows, fields) {
         if (!err) {
