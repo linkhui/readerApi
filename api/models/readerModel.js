@@ -16,12 +16,17 @@ exports.readDB = function (req,res) {
     var pathname = url.parse(req.url).pathname;
     var querys = url.parse(req.url).query;
     var pagesize = req.query['pagesize'];
-    if (pagesize == 0) {
-        pagesize = 50;
+    if (pagesize == '' || pagesize == null || pagesize == undefined) {
+        pagesize = 20;
     }
+    var page = req.query['page'];
+    if (page == '' || page == null || page == undefined) {
+        page = '1';
+    }
+    var start = (parseInt(page) - 1) * parseInt(pagesize);
     // console.log("Request for "  + " " + city + " received.");
-    var selectsql = 'SELECT id,title,audio_url,filename,segments from audio ORDER BY id DESC LIMIT 0,' + pagesize
-
+    var selectsql = 'SELECT id,title,audio_url,filename,segments from audio ORDER BY id DESC LIMIT ' + start + ',' + pagesize
+    // console.log(selectsql)
     connection.query(selectsql, function(err, rows, fields) {
         if (!err) {
             console.log('The solution is: ', rows);
